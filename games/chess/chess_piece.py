@@ -6,9 +6,14 @@
 from piece_type.py import Piece_Type
 
 # Class definition of Chess_Piece
+
+
 class Chess_Piece:
-    #type of chess piece
-    piece_type = Piece_Type()
+
+    # type of chess piece
+    piece_type
+
+    alive
 
     # X coordinate on board
     x_position
@@ -16,11 +21,13 @@ class Chess_Piece:
     # Y coordinate on board
     y_position
 
-	# Initiate each piece to nothing useful at first
-	def __init__(self):
-		x_position = -1
-		y_position = -1
-		piece_type = piece_type.
+    # Initiate pieces with default values tha
+
+    def __init__(self, x_pos=-1, y_pos=-1, p_type=Piece_Type.NOTYPE, al = False):
+        x_position = x_pos
+        y_position = y_pos
+        piece_type = p_type
+        alive = al
 
     # Populates the chess piece with information. Used at the start of
     # the game to initialize all of the pieces
@@ -28,3 +35,4 @@ class Chess_Piece:
         x_position = x_pos
         y_position = y_pos
         piece_type = p_type
+        alive = True
